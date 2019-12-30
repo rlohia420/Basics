@@ -17,10 +17,10 @@ public class IsStringAnagram {
 		char[] word1 = a.toLowerCase().replaceAll("[\\s]", "").toCharArray();
 		char[] word2 = b.toLowerCase().replaceAll("[\\s]", "").toCharArray();
 		Arrays.sort(word1);
-		Arrays.sort(word1);
+		Arrays.sort(word2);
 		System.out.println(word1);
 		System.out.println("======");
-		System.out.println(word1);
+		System.out.println(word2);
 		return (Arrays.equals(word1, word2));
 	}
 
@@ -29,21 +29,24 @@ public class IsStringAnagram {
 		if (a.length() != b.length())
 			status = false;
 		else {
-			int counter = 0;
 			Map<Character, Integer> map = new HashMap<>();
 			for (int i = 0; i < a.length(); i++) {
 				char key = a.charAt(i);
 				if (map.containsKey(key)) {
-					counter = map.get(key);
-				}
-				map.put(key, ++counter);
+					map.put(key,map.get(key)+1);
+				}else {
+				map.put(key, 1);}
+			}
+			for (int i = 0; i < a.length(); i++) {
+				char key = b.charAt(i);
 				key=b.charAt(i);
 				if(map.containsKey(key)) {
-					counter = map.get(key);
-				}
-				map.put(key, --counter);
+					map.put(key,map.get(key)-1);
+				}else {
+				map.put(key,1);}
 			}
 			for(int value:map.values()) {
+				if(value!=0)
 				status= false;
 			}
 		}
