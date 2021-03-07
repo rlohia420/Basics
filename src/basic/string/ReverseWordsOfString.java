@@ -19,7 +19,6 @@ public class ReverseWordsOfString {
 		
 		
 		//out put = "olleH yM emaN si aheN aihoL"
-		String str1 = str;
 		List<String> newSplitted = Arrays.asList(str.split(" "));
 		StringBuilder sb12 = null;
 		StringBuilder sb1 = new StringBuilder();
