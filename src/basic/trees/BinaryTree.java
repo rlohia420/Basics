@@ -14,6 +14,24 @@ public class BinaryTree {
    /* testing for example nodes */
     public static void main(String args[])
     {
+    	Node root = new Node(1);
+    	/* preorder traversal
+		        12
+		       / \
+		     10  30   -> 12,10,25,30,40
+		        / \
+		       25  40
+    	 */
+    	
+        root = new Node(12);
+        root.left = new Node(10);
+        root.right = new Node(30);
+        root.right.left = new Node(25);
+        root.right.right = new Node(40);
+        System.out.println(TreeOperations.contains(root, 11));
+    	Traversals.spiralOrder(root);
+
+        TreeOperations.isBST(root);
         /* creating a binary tree and entering the nodes
                  12
                 / \
@@ -21,7 +39,6 @@ public class BinaryTree {
                  / \
                 25  40
          */
-    	Node root = new Node(1);
         root = new Node(12);
         root.left = new Node(10);
         root.right = new Node(30);
@@ -43,7 +60,7 @@ public class BinaryTree {
 		root.right.left = new Node(25);
 		root.right.right = new Node(40);
 		
-		RightViewOfTree.rightViewUtil(root, 1);
+		//RightViewOfTree.rightViewUtil(root, 1);
         
         
         /*top view*/
