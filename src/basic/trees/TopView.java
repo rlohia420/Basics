@@ -22,6 +22,8 @@ public class TopView {
     // distance from root.
     static TreeMap<Integer, pair> m = new TreeMap<>();
 	static void topView(Node root) {
+        System.out.println("Following are nodes in"+ " top view of Binary Tree");
+
 		fillMap(root, 0, 0);
 
 		for (Map.Entry<Integer, pair> entry : m.entrySet()) {

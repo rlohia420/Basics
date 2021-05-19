@@ -11,32 +11,49 @@ public class BinaryTree {
         }
     }
 
-    Node root;
-
-    // A wrapper over leftViewUtil()
-    void leftView()
-    {
-        LeftViewOfTree.leftViewUtil(root, 1);
-    }
-
    /* testing for example nodes */
     public static void main(String args[])
     {
         /* creating a binary tree and entering the nodes
                  12
                 / \
-              10  30   -> 10,12,25
+              10  30   -> 12,10,25
                  / \
                 25  40
          */
-        BinaryTree tree = new BinaryTree();
-        tree.root = new Node(12);
-        tree.root.left = new Node(10);
-        tree.root.right = new Node(30);
-        tree.root.right.left = new Node(25);
-        tree.root.right.right = new Node(40);
+    	Node root = new Node(1);
+        root = new Node(12);
+        root.left = new Node(10);
+        root.right = new Node(30);
+        root.right.left = new Node(25);
+        root.right.right = new Node(40);
 
-        tree.leftView();
+        //LeftViewOfTree.leftViewUtil(root, 1);
+        
+        /* creating a binary tree and entering the nodes
+		        12
+		       / \
+		     10  30   -> 12,30,40
+		        / \
+		       25  40
+         */
+		root = new Node(12);
+		root.left = new Node(10);
+		root.right = new Node(30);
+		root.right.left = new Node(25);
+		root.right.right = new Node(40);
+		
+		RightViewOfTree.rightViewUtil(root, 1);
+        
+        
+        /*top view*/
+        
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.right = new Node(4);
+        root.left.right.right = new Node(5);
+        root.left.right.right.right = new Node(6);
+        //TopView.topView(root);
     }
 
 }
