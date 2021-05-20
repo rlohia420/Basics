@@ -1,4 +1,4 @@
-package basic.string;
+package basic.sorts;
 
 import java.util.HashSet;
 import java.util.Set;

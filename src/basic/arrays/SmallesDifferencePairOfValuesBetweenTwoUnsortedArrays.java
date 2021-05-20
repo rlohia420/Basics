@@ -1,4 +1,4 @@
-package basic.integerMix;
+package basic.arrays;
 
 import java.util.Arrays;
 
