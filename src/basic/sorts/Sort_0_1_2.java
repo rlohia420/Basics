@@ -1,8 +1,12 @@
 package basic.sorts;
 
 public class Sort_0_1_2 {
+<<<<<<< HEAD
     static void sort012(int a[], int arr_size)
     {
+=======
+    static void sort012(int a[], int arr_size){
+>>>>>>> 3eda8a1a1ed6f0cce9159921d6bf7732402defd0
         int lo = 0;
         int hi = arr_size - 1;
         int mid = 0, temp = 0;
@@ -30,16 +34,24 @@ public class Sort_0_1_2 {
         }
     }
 
+<<<<<<< HEAD
     static void printArray(int arr[], int arr_size)
     {
+=======
+    static void printArray(int arr[], int arr_size){
+>>>>>>> 3eda8a1a1ed6f0cce9159921d6bf7732402defd0
         int i;
         for (i = 0; i < arr_size; i++)
             System.out.print(arr[i] + " ");
         System.out.println("");
     }
 
+<<<<<<< HEAD
     public static void main(String[] args)
     {
+=======
+    public static void main(String[] args){
+>>>>>>> 3eda8a1a1ed6f0cce9159921d6bf7732402defd0
         int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
         int arr_size = arr.length;
         sort012(arr, arr_size);

@@ -1,4 +1,4 @@
-package basic.integerMix;
+package basic.string;
 
 import javafx.util.Pair;
 

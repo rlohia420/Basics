@@ -1,4 +1,4 @@
-package basic.integerMix;
+package basic.arrays;
 
 public class LargestAndSmallestNum {
 
