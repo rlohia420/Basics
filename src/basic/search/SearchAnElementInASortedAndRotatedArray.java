@@ -1,18 +1,6 @@
 package basic.search;
 
 public class SearchAnElementInASortedAndRotatedArray {
-/* pivot element is the element arund whcih array is rotating
- * 1) Find middle point mid = (l + h)/2
-   2) If key is present at middle point, return mid.
-   3) Else If arr[l..mid] is sorted
-    a) If key to be searched lies in range from arr[l]
-       to arr[mid], recur for arr[l..mid].
-    b) Else recur for arr[mid+1..h]
-   4) Else (arr[mid+1..h] must be sorted)
-    a) If key to be searched lies in range from arr[mid+1]
-       to arr[h], recur for arr[mid+1..h].
-    b) Else rec
- */
 	
     static int search(int arr[], int l, int h, int key) {
         if (l > h)
@@ -23,25 +11,21 @@ public class SearchAnElementInASortedAndRotatedArray {
         if (arr[l] <= arr[mid]) {
             if (key >= arr[l] && key <= arr[mid])
                 return search(arr, l, mid - 1, key);
-            /*If key not lies in first half subarray,
-           Divide other half  into two subarrays,
-           such that we can quickly check if key lies
-           in other half */
             return search(arr, mid + 1, h, key);
         }
- 
-        /* If arr[l..mid] first subarray is not sorted,
-           then arr[mid... h] must be sorted subarry*/
-        if (key >= arr[mid] && key <= arr[h])
-            return search(arr, mid + 1, h, key); 
-        return search(arr, l, mid - 1, key);
+        if(arr[mid]<arr[h]) {
+	        if (key >= arr[mid] && key <= arr[h])
+	            return search(arr, mid + 1, h, key); 
+	        return search(arr, l, mid - 1, key);
+        }
+        return -1;
     }
  
     public static void main(String args[])
     {
         int arr[] = { 4, 5, 6, 7, 8, 9, 1, 2, 3 };
         int n = arr.length;
-        int key = 6;
+        int key = 2;
         int i = search(arr, 0, n - 1, key);
         if (i != -1)
             System.out.println("Index: " + i);

@@ -6,7 +6,7 @@ public class StackImplementationUsing2Queue {
 
 	LinkedList q1;
 	LinkedList q2;
-	StackImplementationUsing2Queue(){
+	public StackImplementationUsing2Queue(){
 		q1=new LinkedList();
 		q2=new LinkedList();
 	}

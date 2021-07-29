@@ -43,7 +43,7 @@ public class DoubleLinkedList {
 			System.out.println("empty");
 		}
 		Node node = head;
-		head  = head.next;
+		head=head.next;
 		head.prev=null;
 		size--;
 		return node;

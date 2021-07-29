@@ -3,7 +3,6 @@ package basic.trees;
 import basic.linkedlist.LinkedList;
 
 public class IsGivenLinkedListExistInBinaryTree {
-
 	/**
 	 * Definition for singly-linked list.
 	 * public class ListNode {
