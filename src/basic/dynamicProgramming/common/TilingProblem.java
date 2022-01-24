@@ -1,4 +1,4 @@
-package basic.dynamicProgramming.knapsack;
+package basic.dynamicProgramming.common;
 //no. of ways to place 2*1 size
 //tiles in 2*n size board.
 //Nt corrct
