@@ -66,7 +66,8 @@ public class NextGreater {
  
     public static void main(String[] args)
     {
-        char digits[] = { '5','3','4','1','9','7','6' };
+        char digits[] = { '5','3','4','1','9','7','6' }; //-> 5346179
+        //char digits[] = { '5','1','4','9','8','7','6' }; -> 5164789
         int n = digits.length;
         findNext(digits, n);
     }
