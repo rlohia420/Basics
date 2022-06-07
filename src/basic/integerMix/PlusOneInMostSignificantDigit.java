@@ -2,10 +2,11 @@ package basic.integerMix;
 
 public class PlusOneInMostSignificantDigit {
     public static void main(String args[]){
-        int[] input = {9,3,10};
+        int[] input = {9,3,9};
         for(int i=0;i<input.length;i++){
-            System.out.println(input[i]);
+            System.out.print(input[i]+"-");
         }
+        System.out.println();
         int[] result = plusOne(input);
         for(int i=0;i<result.length;i++){
             System.out.print(result[i] +"-");
