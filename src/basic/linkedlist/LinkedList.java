@@ -167,7 +167,7 @@ public class LinkedList {
 	}
 	public Node removeDuplicate(Node node) {
 		Node duplicate=null;
-		for(Node ptr1=node;ptr1!=null && ptr1.next!=null ; ptr1=ptr1.next ) {
+		for(Node ptr1=node;ptr1!=null ; ptr1=ptr1.next ) {
 			for(Node ptr2=ptr1.next;ptr2!=null ;ptr2=ptr2.next) {
 				if(ptr1.data==ptr2.data) {
 					duplicate=ptr1;

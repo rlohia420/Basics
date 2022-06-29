@@ -10,7 +10,7 @@ public class Stack {
 		}
 	}
 	private Node top;
-	public boolean isEmplty() {
+	public boolean isEmpty() {
 		return (top==null);
 	}
 	public int peek() {

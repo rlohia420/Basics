@@ -6,6 +6,11 @@ import java.util.TreeMap;
 import basic.trees.BinaryTree.Node;
 
 public class TopView {
+	static class Node {
+        Node left;
+        Node right;
+        int data;
+    }
 	static class pair {
         int first, second;
  
@@ -42,5 +47,22 @@ public class TopView {
 		fillMap(root.left, d - 1, l + 1);
 		fillMap(root.right, d + 1, l + 1);
 	}
+	 public static void main(String args[])
+	    {
+	        Node root = newNode(1);
+	        root.left = newNode(2);
+	        root.right = newNode(3);
+	        root.left.right = newNode(4);
+	        root.left.right.right = newNode(5);
+	        root.left.right.right.right = newNode(6);
+	        topView(root);
+	    }
+	 static Node newNode(int key)
+	    {
+	        Node node = new Node();
+	        node.left = node.right = null;
+	        node.data = key;
+	        return node;
+	    }
 
 }

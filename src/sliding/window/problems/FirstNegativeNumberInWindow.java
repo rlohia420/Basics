@@ -24,7 +24,7 @@ public class FirstNegativeNumberInWindow {
 				if(queue.isEmpty()) {
 					System.out.println("0 ");
 				}else if (arr[i] == queue.peek()) {
-					int s = queue.peek();
+					int s = queue.poll();
 					System.out.println(s+"");
 				}else {
 					System.out.println(queue.peek()+" ");

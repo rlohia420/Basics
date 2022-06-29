@@ -7,10 +7,11 @@ import java.util.Map;
 public class IsStringAnagram {
 
 	public static void main(String args[]) {
-		System.out.println("When string are equal irrespective of character position");
+		/*System.out.println("When string are equal irrespective of character position");
 		System.out.println(isAnagram("CAT", "TAC"));
 		
 		System.out.println(isAnagramUsingMap("CAT","TAC"));
+		*/subString("abc");
 	}
 
 	public static boolean isAnagram(String a, String b) {
@@ -51,5 +52,13 @@ public class IsStringAnagram {
 			}
 		}
 		return status;
+	}
+	
+	private static void subString(String str) {
+		for(int i=0;i<=str.length();i++) {
+			for(int j=str.length();j>=0;j--) {
+				System.out.println(str.substring(i,j));
+			}
+		}
 	}
 }

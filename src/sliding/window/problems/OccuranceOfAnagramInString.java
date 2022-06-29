@@ -15,16 +15,18 @@ public class OccuranceOfAnagramInString {
 		int i=0,j=0;
 		int k = p.length();
 		int size = s.length();
+		int count =0;
 		while(j<size) {
 			if(j-i+1 < k) {
 				j++;
 			}else if(j- i +1 ==k) {
 				if(isAnagram(s.substring(i,j+1),p)){
-					System.out.println(i);
+					count++;
 				}
 				i++;j++;
 			}
 		}
+		System.out.println(count);
 	}
 	private static boolean isAnagram(String a, String b) {
 		if(a.length()!=b.length()) {
