@@ -6,7 +6,7 @@ public class CountOfLongestCommonSubStringUsingMemo {
 		//String x = "abcgefgh";
 		//String y = "abcxefy";
 		String x="abcde";
-		String y="abfce";
+		String y="abcfce";
 		int m = x.length();
 		int n = y.length();
 		int count=0;

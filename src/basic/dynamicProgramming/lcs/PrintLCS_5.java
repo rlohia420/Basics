@@ -1,6 +1,6 @@
 package basic.dynamicProgramming.lcs;
 
-public class PrintLCS {
+public class PrintLCS_5 {
 	public static void main(String[] args) {
 		String X = "AGGTAB";
 		String Y = "GXTXAYB";

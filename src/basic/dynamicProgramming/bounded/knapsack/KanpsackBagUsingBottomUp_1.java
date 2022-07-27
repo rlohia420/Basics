@@ -21,9 +21,9 @@ public class KanpsackBagUsingBottomUp_1 {
 	}
 
 	public static void main(String args[]) {
-		int val[] = new int[] { 60, 100, 120 };
-		int wt[] = new int[] { 50, 20, 30 };
-		int W = 40;
+		int wt[] = new int[] {1,2,3};
+		int val[] = new int[] { 10,15,40};
+		int W = 5;
 		int n = val.length;
 		System.out.println(knapSack(W, wt, val, n));
 	}

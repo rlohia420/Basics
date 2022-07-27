@@ -16,22 +16,22 @@ public class SpiralMatrix {
 		int i, sRow=0,sCol=0,eRow=m, eCol=n;
 		while(sRow<eRow && sCol<eCol) {
 			for(i=sCol;i<eCol;i++) {
-				System.out.print(a[sRow][i] +" ");
+				System.out.print(a[sRow][i] +"->");
 			}
 			sRow++;
 			for(i=sRow;i<eRow;i++) {
-				System.out.print(a[i][eCol-1]+" ");
+				System.out.print(a[i][eCol-1]+"->");
 			}
 			eCol--;
 			if(sRow<eRow) {
 				for(i=eCol-1;i>=sCol;i--) {
-					System.out.print(a[eRow-1][i]+" ");
+					System.out.print(a[eRow-1][i]+"->");
 				}
 				eRow--;
 			}
 			if(sCol<eCol) {
 				for(i =eRow-1;i>=sRow;i--) {
-					System.out.print(a[i][sCol]+" ");
+					System.out.print(a[i][sCol]+"->");
 				}
 				sCol++;
 			}

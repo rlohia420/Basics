@@ -30,7 +30,7 @@ public class CountOfSubSetSum_4 {
 	/* Driver code */
 	public static void main(String args[]) {
 		int set[] = { 3, 34, 4, 12, 7, 2,1 };//{3,4} , {4,2,1}, {7}
-		int sum = 15;
+		int sum = 7;
 		int n = set.length;
 		System.out.println("Found a subset" + " with given sum = "+subsetSum(set, n, sum));
 	}

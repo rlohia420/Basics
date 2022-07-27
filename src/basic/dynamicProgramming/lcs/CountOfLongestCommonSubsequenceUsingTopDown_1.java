@@ -1,15 +1,10 @@
 package basic.dynamicProgramming.lcs;
 
-public class CountOfLongestCommonSubsequenceUsingTopDown {
+public class CountOfLongestCommonSubsequenceUsingTopDown_1 {
 	//https://www.youtube.com/watch?v=hR3s9rGlMTU
 	//https://github.com/shubhamchemate003/Dynamic-Programming-Questions-by-Aditya-Verma/blob/main/LCS_bottom_up_dp.cpp
 	public static int lcs(char[] X, char[] Y, int m, int n) {
 		int dp[][] = new int[m + 1][n + 1];
-
-		/*
-		 * Following steps build L[m+1][n+1] in bottom up fashion. Note that L[i][j]
-		 * contains length of LCS of X[0..i-1] and Y[0..j-1]
-		 */
 		for (int i = 0; i <= m; i++) {
 			for (int j = 0; j <= n; j++) {
 				if (i == 0 || j == 0)
@@ -25,7 +20,7 @@ public class CountOfLongestCommonSubsequenceUsingTopDown {
 
 	public static void main(String[] args) {
 		String s1 = "ABCD";
-		String s2 = "GXTXAYB";
+		String s2 = "GXTXAYBFC";
 
 		char[] X = s1.toCharArray();
 		char[] Y = s2.toCharArray();

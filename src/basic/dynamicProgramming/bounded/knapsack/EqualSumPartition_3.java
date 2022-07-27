@@ -2,7 +2,7 @@ package basic.dynamicProgramming.bounded.knapsack;
 
 public class EqualSumPartition_3 {
 	public static void main(String args[]) {
-		int set[] = { 1,5,5,11 };
+		int set[] = { 3, 1, 1, 2, 2, 1,1 };
 		if (isEqualSumPartition(set) == true)
 			System.out.println("Found equal sum partion");
 		else

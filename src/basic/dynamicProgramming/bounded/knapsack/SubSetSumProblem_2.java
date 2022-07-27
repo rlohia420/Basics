@@ -3,7 +3,7 @@ package basic.dynamicProgramming.bounded.knapsack;
 public class SubSetSumProblem_2 {
 
 	static boolean isSubsetSum(int arr[], int n, int sum) {
-		boolean[][] t=new boolean[n+1][sum+1]; // DP - matrix
+		boolean[][] t = new boolean[n + 1][sum + 1]; // DP - matrix
 		// initialization
 		for (int i = 0; i <= n; i++) {
 			for (int j = 0; j <= sum; j++) {
@@ -28,8 +28,8 @@ public class SubSetSumProblem_2 {
 
 	/* Driver code */
 	public static void main(String args[]) {
-		int set[] ={ 3, 34, 4, 12, 5, 2 };
-		int sum = 37;
+		int set[] = { 3, 4, 5, 2 };
+		int sum = 91;
 		int n = set.length;
 		if (isSubsetSum(set, n, sum) == true)
 			System.out.println("Found a subset" + " with given sum");

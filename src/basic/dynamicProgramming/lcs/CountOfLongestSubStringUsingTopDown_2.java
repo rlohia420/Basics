@@ -1,6 +1,6 @@
 package basic.dynamicProgramming.lcs;
 
-public class CountOfLongestSubStringUsingTopDown {
+public class CountOfLongestSubStringUsingTopDown_2 {
 	public static int LCSubstr(char[] X, char[] Y, int m, int n) {
 		int dp[][] = new int[m + 1][n + 1];
 
@@ -28,7 +28,7 @@ public class CountOfLongestSubStringUsingTopDown {
 	public static void main(String args[]) {
 		//String x = "abcgefgh";
 		//String y = "abcxefy";
-		String x="ababce";
+		String x="ababcde";
 		String y="abcabcde";
 		int m = x.length();
 		int n = y.length();

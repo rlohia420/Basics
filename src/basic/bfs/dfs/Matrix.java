@@ -9,10 +9,18 @@ public class Matrix {
 	 */
 	public static void main(String args[]) {
 		int[][] mat = { { 0, 0, 0 }, { 0, 1, 0 }, {1,1,1} };
-		int[][] res = updateMatrix(mat);
+		
 		for (int i = 0; i < mat.length; i++) {
 			for (int j = 0; j < mat[0].length; j++) {
 				System.out.print(mat[i][j]);
+			}System.out.println();
+		}
+		
+		System.out.println("RESULT");
+		int[][] res = updateMatrix(mat);
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[0].length; j++) {
+				System.out.print(res[i][j]);
 			}System.out.println();
 		}
 	}
