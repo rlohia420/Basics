@@ -3,7 +3,7 @@ package sliding.window.problems;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LargestSubarrayOfSumK {
+public class LargestSubarrayOfSumK_VW_2 {
 //https://www.youtube.com/watch?v=TfQPoaRDeMQ&list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj&index=8
 	// this solution is for positive numbers only
 	public static void main(String argsp[]) {

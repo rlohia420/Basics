@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class PermutationInString {
+public class PermutationInString_FW_4 {
 	public static boolean checkInclusion(String s1, String s2) {
 		int i=0,j=0;
 		int k = s1.length();

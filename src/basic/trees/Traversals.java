@@ -1,5 +1,7 @@
 package basic.trees;
 
+import basic.trees.BinaryTree.Node;
+
 public class Traversals {
 
 	public static void preOrder(BinaryTree.Node node) {
@@ -73,5 +75,13 @@ public class Traversals {
 		boolean left = rightToLeftOrder(node.right,level-1);
 		boolean right = rightToLeftOrder(node.left,level-1);
 		return left||right;
+	}
+	public static void main(String args[]) {
+		 Node n = new Node(2);
+	     n.left = new Node(1);
+	     n.right = new Node(6);
+	     n.right.left = new Node(3);
+	     n.right.right = new Node(7);
+	     inOrder(n);
 	}
 }

@@ -8,8 +8,8 @@ public class Matrix {
 	 * [[0,0,0],[0,1,0],[1,1,1]] Output: [[0,0,0],[0,1,0],[1,2,1]]
 	 */
 	public static void main(String args[]) {
-		int[][] mat = { { 0, 0, 0 }, { 0, 1, 0 }, {1,1,1} };
-		
+		//int[][] mat = { { 0, 0, 0 }, { 0, 1, 0 }, {1,1,1} };
+		int[][] mat = { { 0, 1, 0 }, { 1, 1, 1 }, {1,1,1} };
 		for (int i = 0; i < mat.length; i++) {
 			for (int j = 0; j < mat[0].length; j++) {
 				System.out.print(mat[i][j]);

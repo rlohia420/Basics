@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class LongestUniqueSubstring {
+public class LongestUniqueSubstring_VW_1 {
 	public static int longestUniqueSubsttr(String str) {
 		if (str.isEmpty()) {
 			return 0;

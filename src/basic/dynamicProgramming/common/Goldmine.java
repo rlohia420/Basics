@@ -1,8 +1,10 @@
 package basic.dynamicProgramming.common;
 
 /*
- * You are given a grid of size n*m where n and m represent rows and columns respectively and the grid as a whole represents a gold mine.
-You are standing in front of the left wall and are supposed to dig to the right wall. You can start from any row in the left wall.
+ * You are given a grid of size n*m where n and m represent rows and columns 
+ * respectively and the grid as a whole represents a gold mine.
+You are standing in front of the left wall and are supposed to dig to the right wall. 
+You can start from any row in the left wall.
 You are allowed to move 1 cell right-up (d1), 1 cell right (d2) or 1 cell right-down (d3).
 Each cell has a value that is the amount of gold available in the cell.
 You are required to identify the maximum amount of gold that can be dug out from the mine.

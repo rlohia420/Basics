@@ -23,9 +23,10 @@ public class SearchAnElementInASortedAndRotatedArray {
  
     public static void main(String args[])
     {
-        int arr[] = { 4, 5, 6, 7, 8, 9, 1, 2, 3 };
+        //int arr[] = { 4, 5, 6, 7, 8, 9, 1, 2, 3 };
+        int[] arr = {30,40,50,5,10,15,20,25};
         int n = arr.length;
-        int key = 2;
+        int key = 20;
         int i = search(arr, 0, n - 1, key);
         if (i != -1)
             System.out.println("Index: " + i);

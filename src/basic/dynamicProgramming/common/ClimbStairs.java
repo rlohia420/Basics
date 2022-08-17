@@ -50,13 +50,24 @@ public class ClimbStairs {
 	    		if(i==1) {
 	    			dp[i] = dp[i-1];
 	    		}else if(i==2) {
-	    			dp[i] = dp[i-1] +dp[i-2];
+	    			dp[i] = dp[i-1] + dp[i-2];
 	    		}else
-	    			dp[i] = dp[i-1]+dp[i-2]+dp[i-3];
+	    			dp[i] = dp[i-1] + dp[i-2]+dp[i-3];
 	    	}
 	    	return dp[n];
 	    }
-	    
+	    public static int climbIn2StepsUsingTabulation(int n) {
+	    	int[] dp = new int[n+1];
+	    	dp[0]=1;
+	    	for(int i=1;i<=n;i++) {
+	    		if(i==1) {
+	    			dp[i] = dp[i-1];
+	    		}else {
+	    			dp[i] = dp[i-1] + dp[i-2];
+	    		}
+	    	}
+	    	return dp[n];
+	    }
 	    
 	    public static int climbIn3Steps(int n) {
 	        int[] dp = new int[n+1];
@@ -66,5 +77,6 @@ public class ClimbStairs {
 	    	System.out.println("2 steps = " +climbIn2Steps(6));
 	    	System.out.println("3 steps using memo = "+climbIn3Steps(10));
 	    	System.out.println("3 steps using tabulation "+climbIn3StepsUsingTabulation(10));
+	    	System.out.println("2 steps using tabulation "+climbIn2StepsUsingTabulation(6));
 	    }
 }

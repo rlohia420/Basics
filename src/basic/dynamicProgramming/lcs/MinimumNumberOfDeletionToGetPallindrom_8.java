@@ -24,6 +24,7 @@ public class MinimumNumberOfDeletionToGetPallindrom_8 {
 		return n - LPS(X, n);
 	}
 	public static void main(String args[]) {
-		System.out.println(minDelForPallindrome("abcdecba","abcdecba".length()));
+		String str ="abcdfcba";
+		System.out.println(minDelForPallindrome(str,str.length()));
 	}
 }

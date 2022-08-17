@@ -1,5 +1,6 @@
 package basic.trees;
 
+
 /*
  * Diameter is the longest path between two nodes in tree
  * approach:
@@ -50,6 +51,7 @@ public class Diameter {
 	        System.out.println(
 	            "The diameter of given binary tree is : "
 	            + tree.diameter());
+	       
 	}
 }
 class Node {

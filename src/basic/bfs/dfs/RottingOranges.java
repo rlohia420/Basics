@@ -1,6 +1,7 @@
 package basic.bfs.dfs;
 
 public class RottingOranges {
+	//max path to rot all the oranges
 	public static void main(String args[]) {
 		int[][] grid = { { 2, 1, 1 }, { 1, 1, 0 }, { 0, 1, 1 } };
 		for (int i = 0; i < grid.length; i++) {

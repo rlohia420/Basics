@@ -2,11 +2,11 @@ package sliding.window.problems;
 
 import java.util.Arrays;
 
-public class OccuranceOfAnagramInString {
+public class OccuranceOfAnagramInString_FW_3 {
 
 	public static void main(String args[]) {
-		String s = "abab";
-		String p = "ab";
+		String s = "abacb";
+		String p = "abc";
 		anagramOccurance(s,p);
 		
 	}

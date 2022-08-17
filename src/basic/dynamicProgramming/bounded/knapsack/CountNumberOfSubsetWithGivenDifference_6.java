@@ -45,8 +45,8 @@ public class CountNumberOfSubsetWithGivenDifference_6 {
 	}
 
 	public static void main(String args[]) {
-		int set[] = { 3, 34, 4, 12, 7, 2,1,1};// { 1,1,2,3 };//
-		int diff = 5;
+		int set[] = { 3, 7, 2,2,1};// { 1,1,2,3 };//
+		int diff = 2;
 		System.out.println(CountSubsetsWithDiff(set,set.length,diff));
 	}
 	

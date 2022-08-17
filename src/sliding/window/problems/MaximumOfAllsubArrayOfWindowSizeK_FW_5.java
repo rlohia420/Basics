@@ -3,7 +3,7 @@ package sliding.window.problems;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MaximumOfAllsubArrayOfWindowSizeK {
+public class MaximumOfAllsubArrayOfWindowSizeK_FW_5 {
 
 	public static void main(String args[]) {
 		//int [] arr = {4,3,-1,6,5,3,8,7}; //o/p : {3,3,5,5,6,7} need to fid out the maximum element in all suArray

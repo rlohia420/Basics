@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //https://www.youtube.com/watch?v=Lav6St0W_pQ&list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj&index=10
-public class LongestSubStringWithKUniqueCharacter {
+public class LongestSubStringWithKUniqueCharacter_VW_3 {
 
 	public static void main(String args[]) {
 		String str = "aabacbebebe";
@@ -18,7 +18,7 @@ public class LongestSubStringWithKUniqueCharacter {
 		Map<Character,Integer> map = new HashMap<>();
 		while(j<size) {
 			if(map.containsKey(str.charAt(j))) {
-				map.put(str.charAt(j), map.get(str.charAt(i))+1);
+				map.put(str.charAt(j), map.get(str.charAt(j))+1);
 			}else {
 				map.put(str.charAt(j), 1);
 			}

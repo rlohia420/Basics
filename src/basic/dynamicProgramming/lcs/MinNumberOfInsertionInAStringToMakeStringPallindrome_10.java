@@ -9,7 +9,7 @@ public class MinNumberOfInsertionInAStringToMakeStringPallindrome_10 {
 			for (int j = 0; j <= n; j++) {
 				if (i == 0 || j == 0)
 					dp[i][j] = 0;
-				else if (X[i - 1] == Y[j - 1] && i != j)
+				else if (X[i - 1] == Y[j - 1])
 					dp[i][j] = 1 + dp[i - 1][j - 1];
 				else
 					dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
@@ -26,6 +26,7 @@ public class MinNumberOfInsertionInAStringToMakeStringPallindrome_10 {
 		return n - LPS(X, n);
 	}
 	public static void main(String args[]) {
-		System.out.println(minInsertionForPallindrome("abcdecba","abcdecba".length()));
+		String str = "abcdecba";
+		System.out.println(minInsertionForPallindrome(str,str.length()));
 	}
 }
