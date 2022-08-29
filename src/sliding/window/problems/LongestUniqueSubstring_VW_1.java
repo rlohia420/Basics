@@ -57,9 +57,15 @@ public class LongestUniqueSubstring_VW_1 {
 	}
 	public static void main(String[] args) {
 		String str = "geeksforgeeks";
+		String s1 = "ababcabab";
+		String s2 = "bbbbb";
+		String s3 = "pwwkew";
 		//String str = "pwwkew";//"aabacbebebe";
 		System.out.println("The input string is " + str);
 		int len = longest(str);
-		System.out.println("The length of the longest " + "non-repeating character " + "substring is " + len);
+		System.out.println(str +" = " + len);
+		System.out.println("ababcabab = "+ longest("ababcabab"));
+		System.out.println("bbbbb = "+longest("bbbbb"));
+		System.out.println("pwwkew = "+longest("pwwkew"));
 	}
 }
