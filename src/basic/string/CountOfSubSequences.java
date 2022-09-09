@@ -13,13 +13,13 @@ public class CountOfSubSequences {
 		return paths.size();
 	}
 
-	private static void dfs(String path, String left) {
-		if (path.length() > 0)
-			paths.add(path);
-		for (int i = 0; i < left.length(); i++) {
-			String before = left.substring(0, i);
-			String after = left.substring(i + 1, left.length());
-			dfs(path + left.charAt(i), before + after);
+	private static void dfs(String perm, String word) {
+		if (perm.length() > 0) {
+			paths.add(perm);
+			System.out.println(perm);
+		}
+		for (int i = 0; i < word.length(); i++) {
+			dfs(perm + word.charAt(i), word.substring(0, i) + word.substring(i + 1, word.length()));
 		}
 	}
 	public static void main(String args[]) {

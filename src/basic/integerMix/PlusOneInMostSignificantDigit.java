@@ -2,12 +2,19 @@ package basic.integerMix;
 
 public class PlusOneInMostSignificantDigit {
     public static void main(String args[]){
+    	int x = 234;
+    	String temp = Integer.toString(x);
+    	int[] newGuess = new int[temp.length()];
+    	for (int i = 0; i < temp.length(); i++)
+    	{
+    	    newGuess[i] = temp.charAt(i) - '0';
+    	}
         int[] input = {9,3,9};
         for(int i=0;i<input.length;i++){
             System.out.print(input[i]+"-");
         }
         System.out.println();
-        int[] result = plusOne(input);
+        int[] result = plusOne(newGuess);
         for(int i=0;i<result.length;i++){
             System.out.print(result[i] +"-");
         }

@@ -5,8 +5,8 @@ public class AllPermutationOfString {
 	public static int counter = 0;
 
 	public static void main(String args[]) {
-		// perm(" ", "Neha");
-		generatePermutation("Neha", 0, "Neha".length());
+		 perm(" ", "Neha");
+		//generatePermutation("Neha", 0, "Neha".length());
 		System.out.println("Total number of permutation : " + counter);
 	}
 

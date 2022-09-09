@@ -8,7 +8,7 @@ public class StackWithMinOperationInO1 {
 	Stack s;
     Integer minEle;
   
-    StackWithMinOperationInO1() { s = new Stack(); }
+    StackWithMinOperationInO1() {s = new Stack(); }
   
     void getMin()
     {

@@ -29,7 +29,7 @@ public class SubSetSumProblem_2 {
 	/* Driver code */
 	public static void main(String args[]) {
 		int set[] = { 3, 4, 5, 2 };
-		int sum = 91;
+		int sum = 11;
 		int n = set.length;
 		if (isSubsetSum(set, n, sum) == true)
 			System.out.println("Found a subset" + " with given sum");

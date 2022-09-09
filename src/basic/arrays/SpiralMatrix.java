@@ -14,7 +14,7 @@ public class SpiralMatrix {
 	//Desired output is - 1 2 3 6 9 8 7 5 4 spiral matrix
 	public static void spiralMatirx(int m , int n , int[][] a) {
 		int i, sRow=0,sCol=0,eRow=m, eCol=n;
-		while(sRow<eRow && sCol<eCol) {
+		while(sRow < eRow && sCol < eCol) {
 			for(i=sCol;i<eCol;i++) {
 				System.out.print(a[sRow][i] +"->");
 			}

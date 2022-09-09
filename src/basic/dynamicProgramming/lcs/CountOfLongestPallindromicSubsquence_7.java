@@ -27,6 +27,8 @@ public class CountOfLongestPallindromicSubsquence_7 {
 		//System.out.println(LPS("NEHALOHIAIHOLNEHA","NEHALOHIAIHOLNEHA".length()));
 		System.out.println("abcdfgcba = "+ LPS("abcdfgcba","abcdfgcba".length()));
 		System.out.println("acadac = "+LPS("acadac","acadac".length()));
+		
+		System.out.println("NEHALOHIAIHOLNEHA = "+LPS("NEHALOHIAIHOLNEHA","NEHALOHIAIHOLNEHA".length()));
 	}
 }
 
