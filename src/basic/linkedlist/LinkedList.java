@@ -191,7 +191,7 @@ public class LinkedList {
 			return -1;
 		return 0;
 	}
-	public Node removeNthNodeFromEnd(Node node ,int k) {
+	public Node removeKthNodeFromEnd(Node node ,int k) {
 		int length=0;
 		Node current = node;
 		for(Node ptr=node;ptr!=null;ptr=ptr.next) {

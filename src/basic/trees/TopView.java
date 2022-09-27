@@ -1,68 +1,65 @@
 package basic.trees;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import basic.trees.BinaryTree.Node;
-
 public class TopView {
-	static class Node {
-        Node left;
-        Node right;
-        int data;
-    }
-	static class pair {
-        int first, second;
- 
-        pair() {}
-        pair(int i, int j)
-        {
-            first = i;
-            second = j;
+	static Map<Integer, List<Node>> map = new TreeMap<>();
+
+    public static void verticalOrderTraversalRecursive(Node root, int weight){
+        if(root == null){
+            return;
         }
+        putToMap(weight, root);
+        verticalOrderTraversalRecursive(root.left, weight - 1);
+        verticalOrderTraversalRecursive(root.right, weight + 1);
     }
 
-    // map to store the pair of node value and
-    // its level with respect to the vertical
-    // distance from root.
-    static TreeMap<Integer, pair> m = new TreeMap<>();
-	static void topView(Node root) {
-        System.out.println("Following are nodes in"+ " top view of Binary Tree");
+    private static void putToMap(int weight, Node node) {
+        List nodes = map.get(weight);
+        if(nodes == null) {
+            nodes = new ArrayList<>();
+        }
+        nodes.add(node);
+        map.put(weight, nodes);
+    }
 
-		fillMap(root, 0, 0);
+     public static void main(String[] args){
+    	 BinaryTree tree = new BinaryTree();
+         Node root = new Node(5);
+         root.left = (new Node(7));
+         root.right = (new Node(10));
+         root.left.left = (new Node(14));
+         root.left.right= (new Node(19));
 
-		for (Map.Entry<Integer, pair> entry : m.entrySet()) {
-			System.out.print(entry.getValue().first + " ");
-		}
-	}
+         root.right.left = (new Node(30));
+         root.right.right= (new Node(15));
 
-	static void fillMap(Node root, int d, int l) {
-		if (root == null)
-			return;
-		if (m.get(d) == null) {
-			m.put(d, new pair(root.data, l));
-		} else if (m.get(d).second > l) {
-			m.put(d, new pair(root.data, l));
-		}
-		fillMap(root.left, d - 1, l + 1);
-		fillMap(root.right, d + 1, l + 1);
-	}
-	 public static void main(String args[])
-	    {
-	        Node root = newNode(1);
-	        root.left = newNode(2);
-	        root.right = newNode(3);
-	        root.left.right = newNode(4);
-	        root.left.right.right = newNode(5);
-	        root.left.right.right.right = newNode(6);
-	        topView(root);
-	    }
-	 static Node newNode(int key)
-	    {
-	        Node node = new Node();
-	        node.left = node.right = null;
-	        node.data = key;
-	        return node;
-	    }
-
+         root.right.right.left= (new Node(25));
+         TopView.verticalOrderTraversalRecursive(root, 0);
+         for (Map.Entry<Integer, List<Node>> entry: map.entrySet()){
+             System.out.print(entry.getKey() + ": ");
+             entry.getValue().forEach(val -> System.out.print(val.data + " "));
+             System.out.println();
+         }
+         System.out.println("********TOP VIEW********");
+         printTopView();
+         System.out.println("");
+         System.out.println("********BOTTOM VIEW********");
+         printBottomView();
+     }
+     
+     private static void printTopView() {
+         for (Map.Entry<Integer, List<Node>> entry: map.entrySet()){
+             System.out.print(entry.getValue().get(0).data + " ");
+         }
+     }
+     private static void printBottomView() {
+         for (Map.Entry<Integer, List<Node>> entry: map.entrySet()){
+             System.out.print(entry.getValue().get(entry.getValue().size() - 1).data + " ");
+         }
+     }
+     
 }

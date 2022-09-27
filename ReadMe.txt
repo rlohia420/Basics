@@ -33,8 +33,14 @@ target=6
 
 
 
-
-
+String operations:
+1.Permutation of string - i/p - abc , o/p - abc,acb,bca,bac,cab,cba
+2.Arrangement asc - > i/p ={"hen","dog","cat","cat","hen","cat","rat","dog"}
+ o/p - {"rat","dog","dog","hen","hen","cat","cat","cat"}
+3. Arrangement Desc - i/p ->  {"hen","dog","cat","cat","hen","cat","rat","dog"}
+o/p -> {"cat","cat","cat","dog","dog","hen","hen","rat"}
+4. Count of anagram of all subsequences:
+i/p: abc , o/p -> a,ab,abc,ac,acb,b,ba,bac,bc,bca,c,ca,cab,cb,cba
 
 
 

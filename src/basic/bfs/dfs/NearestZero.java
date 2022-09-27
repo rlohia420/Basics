@@ -21,6 +21,7 @@ public class NearestZero {
 	}
 	static int[][] directions = new int[][]{{0,-1},{0,1},{1,0},{-1,0}};
     static boolean[][] visited;
+    
     public static int[][] updateMatrix(int[][] mat) {
         int rows = mat.length, cols = mat[0].length;
         visited = new boolean[rows][cols];
