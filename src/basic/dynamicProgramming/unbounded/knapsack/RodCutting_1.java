@@ -22,8 +22,8 @@ public class RodCutting_1 {
 	}
 
 	public static void main(String args[]) {
-		int[] price = { 60, 100, 120};
-		int[] length = {50,20,30};
+		int[] price = { 60, 100,200, 120};
+		int[] length = {50,10,20,30};
 		int desiredLength = 50;
 		System.out.println(rodCutting(desiredLength,length,price,price.length));
 	}

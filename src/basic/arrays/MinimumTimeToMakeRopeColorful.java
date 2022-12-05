@@ -1,5 +1,13 @@
 package basic.arrays;
 
+/*
+ * In the problem, we are given a string colors representing a rope of balloons,
+ *  and an array neededTime for the removal time of each corresponding balloon. 
+ *  We need to remove some (could be none) of the balloons from the rope,
+ *   so that there are no two consecutive balloons on the rope that have the same color,
+ *    as shown in the picture below.Recall that each balloon has a removal time, 
+ *    our task is to find the minimum total removal time among all such possible removing plans.
+ */
 public class MinimumTimeToMakeRopeColorful {
 	public static void main(String args[]) {
 		String c = "aaabbbabbbb";
@@ -11,26 +19,25 @@ public class MinimumTimeToMakeRopeColorful {
 	}
 
 	public static int getMinNDelete(String colors, int[] neededTime) {//ababbbb
-		int totalTime = 0;
-        int i = 0, j = 0;
-        
-        while (i < neededTime.length && j < neededTime.length) {
-            int currTotal = 0, currMax = 0;
-            
-            // Find all the balloons having the same color as the 
-            // balloon indexed at i, record the total removal time 
-            // and the maximum removal time.
-            while (j < neededTime.length && colors.charAt(i) == colors.charAt(j)) {
-                currTotal += neededTime[j];
-                currMax = Math.max(currMax, neededTime[j]);
-                j++;
-            }
-            
-            // Once we reach the end of the current group, add the cost of 
-            // this group to total_time, and reset two pointers.
-            totalTime += currTotal - currMax;
-            i = j;
-        }
-        return totalTime;    
+		 int n = neededTime.length;
+	        int i=0;
+	        int j=1;
+	        int res = 0;
+	        while(i<n && j<n){
+	            if(colors.charAt(i) == colors.charAt(j)){
+	                if(neededTime[i] <= neededTime[j]){
+	                    res+=neededTime[i];
+	                    i=j;j++;
+	                }
+	                else{
+	                    res+=neededTime[j];
+	                    j++;
+	                }
+	            }
+	            else{
+	                i=j;j++;
+	            }
+	        }
+	        return res;
 	}
 }

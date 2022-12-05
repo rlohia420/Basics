@@ -26,7 +26,7 @@ public class Diameter {
         int ldiameter = diameter(root.left);
         int rdiameter = diameter(root.right);
  
-        return 1 + Math.max(lheight + rheight,
+        return Math.max(lheight + rheight,
                         Math.max(ldiameter, rdiameter));
     }
 	static int height(Node node)

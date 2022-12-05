@@ -2,8 +2,8 @@ package basic.dynamicProgramming.lcs;
 
 public class PrintLCS_5 {
 	public static void main(String[] args) {
-		String X = "AGGTAB";
-		String Y = "GXTXAYB";
+		String X = "AGGTABC";
+		String Y = "GXTXAYBRC";
 		int m = X.length();
 		int n = Y.length();
 		lcsWithOutComments(X, Y, m, n);
@@ -15,7 +15,7 @@ public class PrintLCS_5 {
 		int temp = index;
 
 		char[] lcs = new char[index + 1];
-		lcs[index] = '\u0000'; 
+		//lcs[index] = '\u0000'; 
 		int i = m;
 		int j = n;
 		while (i > 0 && j > 0) {

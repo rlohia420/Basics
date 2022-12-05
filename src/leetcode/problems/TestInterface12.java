@@ -1,4 +1,4 @@
-package test;
+package leetcode.problems;
 
 public class TestInterface12 implements Interface1, Interface2{
 

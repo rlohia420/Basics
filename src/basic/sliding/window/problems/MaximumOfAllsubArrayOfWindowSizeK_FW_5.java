@@ -9,7 +9,7 @@ public class MaximumOfAllsubArrayOfWindowSizeK_FW_5 {
 		//int [] arr = {4,3,-1,6,5,3,8,7}; //o/p : {3,3,5,5,6,7} need to fid out the maximum element in all suArray
 		int[] arr = {12, 35, 1, 10, 34, 190 ,6,98};
 		int k=3;
-		maximumSubarray(arr,k).stream().forEach(x->System.out.println(x));
+		maximumSubarrayNew(arr,k).stream().forEach(x->System.out.println(x));
 	}
 	private static List<Integer> maximumSubarray(int[] arr , int k) {
 		int i=0, j=0;
@@ -30,5 +30,29 @@ public class MaximumOfAllsubArrayOfWindowSizeK_FW_5 {
 			}
 		}
 		return output;
+	}
+	
+	private static List<Integer> maximumSubarrayNew(int[] arr , int k) {
+		int i=0, j=0;
+		List<Integer> output = new LinkedList<>();
+		int size=arr.length;
+		int max =arr[i];
+		while(j<size) {
+			if(j-i+1<k) {
+				j++;
+			}else if(j-i+1==k){
+				output.add(returnMax(arr,i,j));
+				i++;j++;
+			}
+			
+		}
+		return output;
+	}
+	private static int returnMax(int[] arr , int i , int j) {
+		int max = Integer.MIN_VALUE;
+		for(int k=i;k<=j;k++) {
+			max = Math.max(max, arr[k]);
+		}
+		return max;
 	}
 }

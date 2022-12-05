@@ -1,5 +1,10 @@
 package basic.arrays;
 
+/*
+ * Given two arrays A[] and B[] of size N and M respectively, where each element is in the range [0, 9], the task is to make each element of the array A[] strictly greater than or smaller than every element in the array B[] by changing any element from either array to any number in the range [0, 9],
+ * minimum number of times.
+ */
+
 public class MinimizeReplacementsToMakeEveryElementInAnArrayExceedEveryElementInAnotherGivenArray {
 
 	public static void main(String args[]) {

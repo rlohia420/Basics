@@ -51,7 +51,7 @@ public class FindNearestRightNodeInBinaryTree_1602_Imp {
 
 	}
 	
-	private void levelOrder(TreeNode tn) {
+	public void levelOrder(TreeNode tn) {
 		int level = 1;
 		while (levelOrder(tn, level)) {
 			level++;
@@ -72,22 +72,5 @@ public class FindNearestRightNodeInBinaryTree_1602_Imp {
 		return left || right;
 	}
 }
-/*
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
 
-	TreeNode() {
-	}
 
-	TreeNode(int val) {
-		this.val = val;
-	}
-
-	TreeNode(int val, TreeNode left, TreeNode right) {
-		this.val = val;
-		this.left = left;
-		this.right = right;
-	}
-}*/

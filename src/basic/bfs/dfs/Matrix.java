@@ -25,6 +25,29 @@ public class Matrix {
 		}
 	}
 
+	public static int[][] updateMatrix1(int[][] mat) {
+		for(int i=0;i<mat.length;i++) {
+			for(int j=0;j<mat[0].length;j++) {
+				if(mat[i][j]!=0) {
+					explore1(mat,i,j);
+				}
+			}
+		}
+		return mat;
+	}
+	
+	public static void explore1(int[][] mat, int i, int j) {
+		if (i < 0 || j < 0 || i >= mat.length || j >= mat[0].length || mat[i][j] != 1)
+			return;
+		int x = mat[i][j];
+		mat[i][j] = x+1;
+		explore1(mat,i+1,j);
+		explore1(mat,i,j+1);
+		explore1(mat,i-1,j);
+		explore1(mat,i,j-1);
+	}
+	
+	
 	public static int[][] updateMatrix(int[][] mat) {
 		int r = mat.length, c = mat[0].length;
 

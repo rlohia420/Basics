@@ -1,5 +1,6 @@
 package basic.sliding.window.problems;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -13,11 +14,22 @@ public class PermutationInString_FW_4 {
 			if(j-i+1 <k) {
 				j++;
 			}else if(j-i+1 == k) {
-				result = isPermutation(s1,s2.substring(i,j+1));
+				result = isAnagram(s1,s2.substring(i,j+1));
 				i++;j++;
 			}
 		}
 		return result;
+	}
+	private static boolean isAnagram(String a, String b) {
+		if(a.length()!=b.length()) {
+			return false;
+		}else {
+			char[] c1 = a.toLowerCase().toCharArray();
+			char[] c2 = b.toLowerCase().toCharArray();
+			Arrays.sort(c1);
+			Arrays.sort(c2);
+			return Arrays.equals(c1, c2);
+		}
 	}
 	private static boolean isPermutation(String s1 , String s2) {
 		Map<Character,Integer> map = new HashMap<>();

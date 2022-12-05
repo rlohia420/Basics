@@ -24,9 +24,7 @@ public class CheckForPossiblePathIn2DMatrix {
 		if(i<0||j<0||i>m||j>n) {
 			return false;
 		}
-		if(arr[i][j]==-1) {
-			return false;
-		}
+		
 		if(arr[i][j]==0 && i==m && j==n) {
 			return true;
 		}

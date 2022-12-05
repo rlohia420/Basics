@@ -21,10 +21,10 @@ public class ShortestCommonSuperSequence_4 {
 		return m + n - lcs(X, Y, n, m);
 	}
 	public static void main(String args[]) {
-		String x = "abcgefghasdc";
-		String y = "abcxefy";
-		//String x="ababc";
-		//String y="abcde";
+		//String x = "abcgefghasdc";
+		//String y = "abcxefy";
+		String x="ababc";
+		String y="abcde";
 		int m = x.length();
 		int n = y.length();
 		System.out.println(SCS(x.toCharArray(), y.toCharArray(), m, n));
