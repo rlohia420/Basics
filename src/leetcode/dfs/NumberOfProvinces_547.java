@@ -28,7 +28,9 @@ public class NumberOfProvinces_547 {
 
 	public static void main(String args[]) {
 		//int[][] isConnected = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } };
-		int[][] isCon = {{1,1,0},{1,1,0},{0,0,1}};
+		int[][] isCon = {{1,1,0},
+						 {1,1,0},
+						 {0,0,1}};
 		System.out.println(findCircleNum1(isCon));
 	}
 

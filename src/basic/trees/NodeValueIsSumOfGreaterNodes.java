@@ -11,10 +11,10 @@ Example 1:
 
 Input:
            2
-         /    \
-        1      6
-              /  \
-             3    7
+         /   \
+        1     6
+             / \
+            3   7
 Output: 18 16 13 7 0
 Explanation:
 Every node is replaced with the 

@@ -30,4 +30,26 @@ public class FindDistanceInABinaryTreeBetweenTwoNodes_1740 {
         int subDistance = Math.max(leftDistance, rightDistance);
         return subDistance >= 0 ? subDistance + 1 : -1;
     }
+    
+    public static int findLevel(TreeNode root, int a, int level)
+    {
+        if (root == null)
+            return -1;
+        if (root.val == a)
+            return level;
+        int left = findLevel(root.left, a, level + 1);
+        if (left == -1)
+            return findLevel(root.right, a, level + 1);
+        return left;
+    }
+ 
+    public int findDistanceNew(TreeNode root, int a, int b)
+    {
+        TreeNode lca = lowestCommonAncestor(root, a, b);
+ 
+        int d1 = findLevel(lca, a, 0);
+        int d2 = findLevel(lca, b, 0);
+ 
+        return d1 + d2;
+    }
 }

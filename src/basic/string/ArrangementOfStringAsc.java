@@ -15,6 +15,8 @@ public class ArrangementOfStringAsc {
 		//o/p - {"RAT","DOG","DOG","HEN,"HEN","CAT,"CAT","CAT"}
 		arrangement(str);
 	}
+	
+	
 	private static void arrangement(String[] str) {
 		Map<String,Integer> map = new LinkedHashMap<>();
 		for(int i=0;i<str.length;i++) {
@@ -29,14 +31,13 @@ public class ArrangementOfStringAsc {
 		list.sort(Comparator.comparing(Entry<String,Integer>::getValue).
 				thenComparing(Entry<String,Integer>::getKey));
 		
-		List<String> s = new ArrayList<>();
+		for(int i=0;i<list.size();i++) {
+			for(int j = list.get(i).getValue();j>0;j--)
+			System.out.println(list.get(i).getKey() );
+		}
+		
 		for(int i=0;i<list.size();i++) {
 			System.out.println(list.get(i).getKey() + " - "+list.get(i).getValue());
-			for(int j=list.get(i).getValue();j>0;j--)
-				s.add(list.get(i).getKey());
-		}
-		for(int i=0;i<s.size();i++) {
-			System.out.println(s.get(i)+" ");
 		}
 	}
 

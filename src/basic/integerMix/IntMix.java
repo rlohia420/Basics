@@ -1,5 +1,10 @@
 package basic.integerMix;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class IntMix {
 
 	public static void main(String args[]) {
@@ -13,6 +18,8 @@ public class IntMix {
 		isPerfact(6);
 		System.out.println("====sumOfEachDigit====");
 		sumOfEachDigit(692);
+		int[] arr = {2,2,1};
+		defangingIPAddress("1.1.1.1");
 	}
 	private static void fabnocci() {
 		int[] f = new int[10];
@@ -53,5 +60,8 @@ public class IntMix {
 			n=n/10;
 		}
 		System.out.println(sum);
+	}
+	public static void defangingIPAddress(String address) {
+		System.out.println(address.replace(".","[.]"));
 	}
 }

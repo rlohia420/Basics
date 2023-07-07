@@ -7,6 +7,7 @@ public class BalancedBracket {
 	public static void main(String args[]) throws IOException {
 		System.out.println(isBalance("[NEHA{LOHIA}PRATEEK]"));
 	}
+	int count=0;
 	private static boolean isBalance(String string) {
 		{
 			Stack<Character> stack = new Stack<Character>();

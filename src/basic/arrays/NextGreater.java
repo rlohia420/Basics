@@ -26,7 +26,7 @@ public class NextGreater {
                 break;
             }
         }
-         
+         //5341976
         // If no such digit is found, then all
         // digits are in descending order means
         // there cannot be a greater number with
@@ -37,7 +37,8 @@ public class NextGreater {
         }
         else
         {
-            int x = ar[i - 1], min = i;
+            int x = ar[i - 1];
+            int min = i;
              
             // II) Find the smallest digit on right
             // side of (i-1)'th digit that is greater

@@ -24,7 +24,7 @@ public class WallAndGates_286 {
 		// rooms[i][j] <= 0 meaning == -1 or == 0, both stop
 		if (i < 0 || i >= m || j < 0 || j >= n || rooms[i][j] <= 0 || isVisited[i][j]) {
 			return;
-		}
+		} 
 
 		rooms[i][j] = Math.min(rooms[i][j], distance + 1);
 		isVisited[i][j] = true;

@@ -37,8 +37,8 @@ public class ScrambledString {
 
 		if (!copy_S1.equals(copy_S2)) {
 			return false;
-		}
-
+		}else return true;
+/*
 		for (int i = 1; i < n; i++) {
 
 			// Check if S2[0...i] is a scrambled
@@ -57,16 +57,16 @@ public class ScrambledString {
 				return true;
 			}
 		}
-
+*/
 		// If none of the above
 		// conditions are satisfied
-		return false;
+		//return false;
 	}
 
 	//Driver Code
 	public static void main(String[] args) {
-		String S1 = "coder";
-		String S2 = "ocred";
+		String S1 = "neha";
+		String S2 = "hane";
 
 		if (isScramble(S1, S2)) {
 			System.out.println("Yes");

@@ -5,7 +5,7 @@ public class CousinsInBinaryTree_993 {
 	static int rh =0;
 	static boolean ans = true;
 	public static void cusion(TreeNode root, int x, int y,int level){
-	    if(root == null){
+	    if(root == null){ 
 	        return;
 	    } 
 	    if(root.left != null && root.right != null){

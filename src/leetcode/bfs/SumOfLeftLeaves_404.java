@@ -3,6 +3,7 @@ package leetcode.bfs;
 public class SumOfLeftLeaves_404 {
 	public static int sumLeft =0;
 	public static int sumRight =0;
+	
 	public static int sumOfLeftLeaves(TreeNode root) {
 		if(root==null) return 0 ;
 

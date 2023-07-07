@@ -1,6 +1,7 @@
 package basic.java8.streams;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -49,6 +50,6 @@ public class EmployeeImple {
 				Collectors.groupingBy(Employee::getCountry, Collectors.mapping(Employee::getName, Collectors.toList())));
 		map1.putAll(map2);
 		
-		//System.out.println(map1);
+		System.out.println("here = " + map1);
 	}
 }

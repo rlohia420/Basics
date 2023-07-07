@@ -20,7 +20,12 @@ public class MirrorImage {
 		if(nodeA!=null || nodeB!=null) {
 			return false;
 		}
-		return (nodeA.data==nodeB.data) && isMirror(nodeA.left , nodeB.right) &&
-				isMirror(nodeA.right, nodeB.left);
+		return (nodeA!=null && nodeB!=null) && (nodeA.data==nodeB.data) 
+				&& isMirror(nodeA.left , nodeB.right) 
+				&& isMirror(nodeA.right, nodeB.left);
+	}
+	
+	public static boolean isSymetric(BinaryTree.Node node ) {
+		return isMirror(node, node);
 	}
 }

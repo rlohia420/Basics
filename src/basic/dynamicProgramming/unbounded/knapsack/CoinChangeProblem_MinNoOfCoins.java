@@ -20,7 +20,7 @@ public class CoinChangeProblem_MinNoOfCoins {
 	}
 	
 	public static void main(String args[]) {
-		int[] coins = {2,5,10,1}; int amount = 7;
+		int[] coins = {1,4,10,1}; int amount = 6;
 		int result = coinChange(coins,amount);
 		System.out.println(result);
 	}

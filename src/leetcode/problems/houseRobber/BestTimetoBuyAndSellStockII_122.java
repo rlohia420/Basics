@@ -27,7 +27,8 @@ public class BestTimetoBuyAndSellStockII_122 {
 	        return dp[n-1];
 	    }
 	 public static void main(String args[]) {
-		 int[] stock = {1,2,12,4,15,10,2,13,1,21};
+		 //int[] stock = {1,2,12,4,15,10,2,13,1,21};
+		 int[] stock = { 12,2,12,4,15,10};
 		 System.out.println(maxProfit(stock));
 	 }
 }

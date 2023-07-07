@@ -1,5 +1,8 @@
 package basic.trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 import basic.trees.BinaryTree.Node;
 
 public class Traversals {
@@ -82,6 +85,25 @@ public class Traversals {
 	     n.right = new Node(6);
 	     n.right.left = new Node(3);
 	     n.right.right = new Node(7);
-	     inOrder(n);
+	     n.right.right.right = new Node(9);
+	     levelOrder1(n);
 	}
+	
+	public static void levelOrder1(BinaryTree.Node root) {
+        if(root!=null) {
+	        Queue <Node> q= new LinkedList<>();
+	        q.add(root);
+	        while(!q.isEmpty()){
+	            int size=q.size();
+	            for (int i = 0; i < size; i++) {
+	            	Node node= q.poll();
+	                if(node.left!=null) q.add(node.left);
+	                if(node.right!=null) q.add(node.right);
+	                System.out.print(node.data+" ");
+	            }
+	        }
+        }
+    }
+	
+	
 }

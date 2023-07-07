@@ -35,6 +35,6 @@ public class BestTimetoBuyandSellStockIV_188 {
 
 	public static void main(String args[]) {
 		int[] stock = { 12,2,12,4,15,10};
-		System.out.println(maxProfit(1, stock));
+		System.out.println(maxProfit(3, stock));
 	}
 }

@@ -27,7 +27,9 @@ public class NumberofClosedIslands_1254 {
 		return a && b && c && d;
 	}
 	public static void main(String args[]) {
-		int[][] arr = {{0,0,1,0,0},{0,1,0,1,0},{0,1,1,1,0}};
+		int[][] arr = {{0,0,1,0,0},
+					   {0,1,0,1,0},
+					   {0,1,1,1,0}};
 		System.out.println(closedIsland(arr));
 	}
 }
