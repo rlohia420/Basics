@@ -19,6 +19,6 @@ public class IsPallindrome {
         return y;
     }
     public static void main(String args[]) {
-    	System.out.println(isPalindrome(1231));
+    	System.out.println(isPalindrome(121));
     }
 }

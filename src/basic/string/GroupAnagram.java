@@ -2,8 +2,10 @@ package basic.string;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 class GroupAnagram {
@@ -11,10 +13,26 @@ class GroupAnagram {
 		String[] strs = { "eat", "tea", "tan", "ate", "bat", "nat" };
 		// o/p - [[tea, ate, eat], [tan, nat], [bat]]
 		List<String> list = Arrays.asList(strs);
-		List<List<String>> result = group_anagram(list);
+		List<List<String>> result = betterApproach(list);
 		System.out.println(result);
 	}
 
+	private static List<List<String>> betterApproach(List<String> list){
+		Map<String,List<String>> map = new HashMap<>();
+		for(int i=0;i<list.size();i++) {
+			String str = list.get(i);
+			char[] ch = str.toCharArray();
+			Arrays.sort(ch);
+			if(map.containsKey(new String(ch))) {
+				map.get(new String(ch)).add(list.get(i));
+			}else {
+				List<String> list1 = new ArrayList<>();
+				list1.add(list.get(i));
+				map.put(new String(ch),list1);
+			}
+		}
+        return new ArrayList<>(map.values());
+	}
 
 	public static List<List<String>> group_anagram(List<String> list) {
 		List<List<String>> result = new ArrayList<>();

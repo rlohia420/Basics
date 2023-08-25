@@ -3,6 +3,12 @@ package basic.string;
 public class RemoveTheDuplicatesInSpecialWay {
 	public static void main(String args[]) {
 		String str= "abccbdefffgghhfhklllmmnnlka"; //o/p = adeha
+	
+		
+		System.out.println("*******************" );
+		System.out.println(result1(str));
+	}
+	private static String result1(String str) {
 		String result ="";
 		int n = str.length();
 		char[] charA = str.toCharArray();
@@ -17,7 +23,7 @@ public class RemoveTheDuplicatesInSpecialWay {
 				result = result.substring(0, result.length()-1);
 			}
 		}
-		System.out.println("*******************" );
-		System.out.println(result);
+		return result;
 	}
+	
 }

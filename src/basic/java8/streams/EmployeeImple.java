@@ -9,6 +9,14 @@ import java.util.stream.Collectors;
 public class EmployeeImple {
 	public static void main(String args[]) {
 
+		/*
+		 * public Employee(String name, int id, String city, String country) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.city = city;
+		this.country = country;
+	}	 */
 		List<Employee> emL = new ArrayList<>();
 		Employee e1 = new Employee("c1", 1, "A", "AA");
 		Employee e2 = new Employee("c2", 2, "B", "BB");
@@ -39,7 +47,6 @@ public class EmployeeImple {
 		Map<String, Long> map = emL.stream().filter(e -> e.getCity() != null)
 				.collect(Collectors.groupingBy(Employee::getCity, Collectors.counting()));
 		//System.out.println(map);
-		
 		//grouping as per city or country if city is null
 		//{A=[c1, c7], B=[c2, c6], C=[c5], D=[c9], E=[c10], X=[c3, c4, c8]}
 		List<Employee> nullCityEmp = emL.stream().filter(e -> e.getCity() == null).collect(Collectors.toList());
@@ -49,7 +56,28 @@ public class EmployeeImple {
 		Map<String, List<String>> map2 = nullCityEmp.stream().collect(
 				Collectors.groupingBy(Employee::getCountry, Collectors.mapping(Employee::getName, Collectors.toList())));
 		map1.putAll(map2);
+		//another simpler approach
+		Map<String, List<String>> map3 = emL.stream().collect(
+				Collectors.groupingBy(e->e.getCity()!=null?e.getCity():e.getCountry(), 
+						Collectors.mapping(Employee::getName, Collectors.toList())));
 		
-		System.out.println("here = " + map1);
+		
+		System.out.println("here = " + map3);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

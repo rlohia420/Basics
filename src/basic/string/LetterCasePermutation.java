@@ -6,12 +6,12 @@ import java.util.List;
 public class LetterCasePermutation {
 
 	public static void main(String args[]) {
-		String str = "a1b2c";
+		String str = "Neha123";
 		List<String> l = letterCasePermutation(str);
 		for (String s : l) {
 			System.out.println(s);
 		}
-
+		System.out.println(l.size());
 	}
 	public static List<String> letterCasePermutation(String S) {
 		List ans = new ArrayList();
@@ -30,6 +30,6 @@ public class LetterCasePermutation {
 				chArr[i] = Character.toLowerCase(chArr[i]);
 			}
 		}
-
 	}
+	
 }

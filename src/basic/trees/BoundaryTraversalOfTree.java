@@ -1,5 +1,8 @@
 package basic.trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import basic.trees.BinaryTree.Node;
 
 public class BoundaryTraversalOfTree {
@@ -84,13 +87,68 @@ public class BoundaryTraversalOfTree {
     	 Node n = new Node(20);
 	     n.left = new Node(8);
 	     n.left.left = new Node(4);
+	     //n.left.left.left = new Node(1);
+	     n.left.left.right = new Node(5);
 	     n.left.right = new Node(12);
 	     n.left.right.left = new Node(10);
 	     n.left.right.right = new Node(14);
 	     n.right = new Node(22);
 	     n.right.right = new Node(25);
-	     boundary.printBoundary(n);
-	     
+	     boundary.boundary(n);
        
     }
+    
+    //===============ANOTHER APPROACH========
+    //https://www.youtube.com/watch?v=s1d8UGDCCN8
+    private static void printLeft(Node node , List<Integer> ans) {
+    	if(node==null || (node.left==null && node.right==null)) {
+    		return;
+    	}
+    	ans.add(node.data);
+    	if(node.left!=null) {
+    		printLeft(node.left,ans);
+    	}
+    	else {
+    		printLeft(node.right,ans);
+    	}
+    }
+    private static void printLeaf(Node node , List<Integer> ans) {
+    	if(node==null) {
+    		return;
+    	}
+    	if(node.left==null && node.right==null) {
+    		ans.add(node.data);
+    		return;
+    	}
+    	printLeaf(node.left,ans);
+    	printLeaf(node.right,ans);
+    }
+    private static void printRight(Node node , List<Integer> ans) {
+    	if(node==null || (node.left==null && node.right==null)) {
+    		return;
+    	}
+    	if(node.right!=null) {
+    		printRight(node.right,ans);
+    	}
+    	else {
+    		printRight(node.left,ans);
+    	}
+    	ans.add(node.data);
+    }
+    private static void boundary(Node node) {
+    	List<Integer> ans = new ArrayList<>();
+    	if(node==null) {
+    		return ;
+    	}
+    	ans.add(node.data);
+    	printLeft(node.left,ans);
+    	printLeaf(node.left,ans);
+    	printLeaf(node.right,ans);
+    	printRight(node.right,ans);
+    	for(int i=0;i<ans.size();i++) {
+    		System.out.println(ans.get(i));
+    	}
+    	
+    }
+    
 }

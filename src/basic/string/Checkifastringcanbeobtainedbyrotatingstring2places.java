@@ -52,8 +52,8 @@ public class Checkifastringcanbeobtainedbyrotatingstring2places {
     {
     	//amazon - azonam
     	//amazon - onamaz
-        String str1 = "geeks";
-        String str2 ="eksge";
+        String str1 = "geekase";
+        String str2 ="ekasege";
       
         System.out.println(isRotated(str1, str2,2) ?  "Yes"
                               : "No");
