@@ -7,10 +7,10 @@ public class CoinChangeProblem_NoOfWays2 {
 		int t[][] = new int[n + 1][sum + 1];
 		for (int i = 0; i <= n; i++)
 			for (int j = 0; j <= sum; j++)
-				if(i==0)
-					t[i][j]=0;
-				else if(j == 0)
+				if(j==0)
 					t[i][j]=1;
+				else if(i == 0)
+					t[i][j]=0;
 				else if (coins[i - 1] <= j)
 					t[i][j] = t[i - 1][j] + t[i][j - coins[i - 1]];
 				else
@@ -19,7 +19,7 @@ public class CoinChangeProblem_NoOfWays2 {
 		return t[n][sum];
 	}
 	public static void main(String args[]) {
-		int[] coins = {1,2,3}; // {1,1,1,1,1,1} - 
+		int[] coins = {1,2,3}; // {1,1,1,1,1,1} - {1,1,1,2} - {1,1,3} - {1,2,2} - {2,3}
 		int sum = 5;
 		System.out.println(getMaxNumberOfWays(coins,coins.length,sum));
 	}

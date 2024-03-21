@@ -3,7 +3,7 @@ package basic.string;
 public class LargestPallindrom {
 
 	public static void main(String args[]) {
-		largestPallingrom("NEHALOHIAIHOLNEHA");
+		largestPallingrom("2345465");
 	}
 	private static void largestPallingrom(String str) {
 		String largest ="";
