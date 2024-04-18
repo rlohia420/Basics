@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class EmployeeImple {
+public class StudentImple {
 	public static void main(String args[]) {
 
 		/*
@@ -17,17 +17,17 @@ public class EmployeeImple {
 		this.city = city;
 		this.country = country;
 	}	 */
-		List<Employee> emL = new ArrayList<>();
-		Employee e1 = new Employee("c1", 1, "A", "AA");
-		Employee e2 = new Employee("c2", 2, "B", "BB");
-		Employee e3 = new Employee("c3", 3, null, "X");
-		Employee e4 = new Employee("c4", 4, null, "X");
-		Employee e5 = new Employee("c5", 5, "C", "CC");
-		Employee e6 = new Employee("c6", 6, "B", "BB");
-		Employee e7 = new Employee("c7", 7, "A", "AA");
-		Employee e8 = new Employee("c8", 8, null, "X");
-		Employee e9 = new Employee("c9", 9, "D", "DD");
-		Employee e10 = new Employee("c10", 10, "E", "EE");
+		List<Student> emL = new ArrayList<>();
+		Student e1 = new Student("c1", 1, "A", "AA");
+		Student e2 = new Student("c2", 2, "B", "BB");
+		Student e3 = new Student("c3", 3, null, "X");
+		Student e4 = new Student("c4", 4, null, "X");
+		Student e5 = new Student("c5", 5, "C", "CC");
+		Student e6 = new Student("c6", 6, "B", "BB");
+		Student e7 = new Student("c7", 7, "A", "AA");
+		Student e8 = new Student("c8", 8, null, "X");
+		Student e9 = new Student("c9", 9, "D", "DD");
+		Student e10 = new Student("c10", 10, "E", "EE");
 		emL.add(e1);
 		emL.add(e2);
 		emL.add(e3);
@@ -49,17 +49,17 @@ public class EmployeeImple {
 		//System.out.println(map);
 		//grouping as per city or country if city is null
 		//{A=[c1, c7], B=[c2, c6], C=[c5], D=[c9], E=[c10], X=[c3, c4, c8]}
-		List<Employee> nullCityEmp = emL.stream().filter(e -> e.getCity() == null).collect(Collectors.toList());
-		List<Employee> nonNullCityEmp = emL.stream().filter(e -> e.getCity() != null).collect(Collectors.toList());
+		List<Student> nullCityEmp = emL.stream().filter(e -> e.getCity() == null).collect(Collectors.toList());
+		List<Student> nonNullCityEmp = emL.stream().filter(e -> e.getCity() != null).collect(Collectors.toList());
 		Map<String, List<String>> map1 = nonNullCityEmp.stream().collect(
-				Collectors.groupingBy(Employee::getCity, Collectors.mapping(Employee::getName, Collectors.toList())));
+				Collectors.groupingBy(Student::getCity, Collectors.mapping(Student::getName, Collectors.toList())));
 		Map<String, List<String>> map2 = nullCityEmp.stream().collect(
-				Collectors.groupingBy(Employee::getCountry, Collectors.mapping(Employee::getName, Collectors.toList())));
+				Collectors.groupingBy(Student::getCountry, Collectors.mapping(Student::getName, Collectors.toList())));
 		map1.putAll(map2);
 		//another simpler approach
 		Map<String, List<String>> map3 = emL.stream().collect(
 				Collectors.groupingBy(e->e.getCity()!=null?e.getCity():e.getCountry(), 
-						Collectors.mapping(Employee::getName, Collectors.toList())));
+						Collectors.mapping(Student::getName, Collectors.toList())));
 		
 		
 		System.out.println("here = " + map3);
