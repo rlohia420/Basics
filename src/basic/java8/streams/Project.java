@@ -1,5 +1,4 @@
-package Java8;
-
+package basic.java8.streams;
 public class Project {
     private String name;
     private String team;

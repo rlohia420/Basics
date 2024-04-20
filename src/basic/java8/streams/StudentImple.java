@@ -45,7 +45,7 @@ public class StudentImple {
 		
 		//{A=2, B=2, C=1, D=1, E=1}
 		Map<String, Long> map = emL.stream().filter(e -> e.getCity() != null)
-				.collect(Collectors.groupingBy(Employee::getCity, Collectors.counting()));
+				.collect(Collectors.groupingBy(Student::getCity, Collectors.counting()));
 		//System.out.println(map);
 		//grouping as per city or country if city is null
 		//{A=[c1, c7], B=[c2, c6], C=[c5], D=[c9], E=[c10], X=[c3, c4, c8]}

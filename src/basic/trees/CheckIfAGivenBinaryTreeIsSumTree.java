@@ -12,12 +12,12 @@ public class CheckIfAGivenBinaryTreeIsSumTree {
     /    \     \
   4      6      3
          */
-        Node n = new Node(28);
-        n.left = new Node(11);
-        n.left.left = new Node(3);
-        n.left.right = new Node(8);
-        n.right = new Node(3);
-        n.right.right = new Node(3);
+		BinaryTree.Node n = new BinaryTree.Node(28);
+		n.left = new BinaryTree.Node(11);
+		n.left.left = new BinaryTree.Node(3);
+		n.left.right = new BinaryTree.Node(8);
+		n.right = new BinaryTree.Node(3);
+		n.right.right = new BinaryTree.Node(3);
         System.out.println(CheckIfAGivenBinaryTreeIsSumTree.sumTree(n,n.left,n.right));
 	}
 	public static boolean sumTree(BinaryTree.Node n , BinaryTree.Node left, BinaryTree.Node right) {

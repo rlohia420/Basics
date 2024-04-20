@@ -83,10 +83,22 @@ public class BoundaryTraversalOfTree {
     // Driver program to test above functions
     public static void main(String args[])
     {
+        /*
+                        20
+                       /  \
+                     8     22
+                    / \     \
+                   4   12    25
+                    \  / \     \
+                    5 10  14    2
+
+         */
     	 BoundaryTraversalOfTree boundary= new BoundaryTraversalOfTree();
     	 Node n = new Node(20);
 	     n.left = new Node(8);
 	     n.left.left = new Node(4);
+
+
 	     //n.left.left.left = new Node(1);
 	     n.left.left.right = new Node(5);
 	     n.left.right = new Node(12);
@@ -94,6 +106,7 @@ public class BoundaryTraversalOfTree {
 	     n.left.right.right = new Node(14);
 	     n.right = new Node(22);
 	     n.right.right = new Node(25);
+        n.right.right.right = new Node(2);
 	     boundary.boundary(n);
        
     }
@@ -150,5 +163,23 @@ public class BoundaryTraversalOfTree {
     	}
     	
     }
-    
+    /*public static void main(String args[]) {
+        /*
+                2
+              / \
+            1    6
+           /    / \
+          6    3   7
+                    \
+                    9
+
+            Node n = new Node(2);
+            n.left = new Node(1);
+            n.right = new Node(6);
+            n.right.left = new Node(3);
+            n.right.right = new Node(7);
+            n.right.right.right = new Node(9);
+            boundary(n);
+        }
+    }*/
 }
