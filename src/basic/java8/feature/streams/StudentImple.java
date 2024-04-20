@@ -1,7 +1,6 @@
-package basic.java8.streams;
+package basic.java8.feature.streams;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
