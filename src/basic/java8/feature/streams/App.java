@@ -1,6 +1,7 @@
 package basic.java8.feature.streams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,6 +10,11 @@ public class App {
     static List<Employee> employeeList = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
+
+        List<Integer> list1 = Arrays.asList(10,20,30,40);
+        List<Integer> list2 = Arrays.asList(20,30,60,80);
+        List<Integer> resp = list1.stream().filter(list2::contains).collect(Collectors.toList());
+
 
         EmployeeFactory employeeFactory = new EmployeeFactory();
         employeeList = employeeFactory.getAllEmployee();
