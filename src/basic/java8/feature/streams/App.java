@@ -25,7 +25,9 @@ public class App {
         //printMinimumSalary();
         //printMinimumSalariedEmployeeList();
         //listOfEmployeeWorkingOnMoreThan2Projects();
-        countOfTotalLaptop();
+       // countOfTotalLaptop();
+        //fetchTop3SalariedEmployee();
+        fetchEmployeeLessThan3TopSalariedEmployee();
     }
 
     //2. Print full name of any employee whose firstName starts with ‘A’.
@@ -51,6 +53,7 @@ public class App {
         List<Integer> salaries = employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).map(x->x.getSalary()).collect(Collectors.toList());
         salaries.stream().forEach(System.out::println);
         Employee thirdHighestSalariedEmployee = employeeList.stream().sorted(Comparator.comparing(x->-x.getSalary())).skip(2).findFirst().orElse(null);
+        System.out.println("Third highest salary");
         System.out.println(thirdHighestSalariedEmployee);
     }
     //6. print min salary
@@ -91,4 +94,19 @@ public class App {
     14. Create a map based on this data, the key should be year of joining and value should be the count of people joined in that particular year.
 
      */
+
+    private static void fetchTop3SalariedEmployee(){
+        System.out.println(employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).collect(Collectors.toList()));
+        System.out.println("Top 3 salaried employees !!!!!");
+       List<Employee> topSalariedEmployeeList =  employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).skip(employeeList.size()-3).collect(Collectors.toList());
+       System.out.println(topSalariedEmployeeList);
+    }
+
+    private static void fetchEmployeeLessThan3TopSalariedEmployee(){
+        System.out.println(employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).collect(Collectors.toList()));
+        System.out.println("Employee having salary less than third highest salaried employee !!!!!");
+       // int thirdHighestSalary = employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).map(y->y.getSalary()).skip(employeeList.size()-3).findFirst().get();
+        List<Employee> employeeSalaryLessThan3rdHighest = employeeList.stream().filter(x->x.getSalary()< (employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).map(y->y.getSalary()).skip(employeeList.size()-3).findFirst().get())).collect(Collectors.toList());
+        System.out.println(employeeSalaryLessThan3rdHighest);
+    }
 }

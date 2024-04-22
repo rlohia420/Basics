@@ -1,7 +1,8 @@
 package basic.java8.feature.streams;
 import java.util.List;
 
-public class Employee {private String id;
+public class Employee {
+    private String id;
     private String firstName;
     private String lastName;
     private int salary;
