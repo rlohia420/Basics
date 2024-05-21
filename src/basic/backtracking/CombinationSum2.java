@@ -1,4 +1,4 @@
-package backtracking;
+package basic.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +26,7 @@ public class CombinationSum2 {
         }
     }
     public static void main(String args[]){
+        //get the set of list making the target sum from the number present in array , duplication is not allowed
         int[] arr1= {2,3,6,7}; int target1 = 7;
         int[] arr2={2,3,5}; int target2 = 8;
         int[] arr3={10,1,2,7,6,1,5}; int target3 = 8;

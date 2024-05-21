@@ -1,4 +1,4 @@
-package backtracking;
+package basic.backtracking;
 
 import java.util.ArrayList;
 import java.util.HashSet;

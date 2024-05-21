@@ -3,6 +3,7 @@ package basic.java8.feature.streams;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StudentImple {
@@ -37,27 +38,19 @@ public class StudentImple {
 		emL.add(e8);
 		emL.add(e9);
 		emL.add(e10);
-		
+
+		//Get the name of student having null city
 		List<String> ss = emL.stream().filter(x->x.getCity()!=null).map(x->x.getName().toUpperCase()).collect(Collectors.toList());
 		ss.forEach(System.out::println);
 		emL.stream().filter(x->x.getCity()!=null).collect(Collectors.toList()).stream().forEach(x->System.out.println(x.getId()));
-		
+
+		//Count of student living in specific city
 		//{A=2, B=2, C=1, D=1, E=1}
-		Map<String, Long> map = emL.stream().filter(e -> e.getCity() != null)
-				.collect(Collectors.groupingBy(Student::getCity, Collectors.counting()));
-		//System.out.println(map);
+		Map<String, Long> map = emL.stream().filter(e -> e.getCity() != null).collect(Collectors.groupingBy(Student::getCity, Collectors.counting()));
+		System.out.println(map);
 		//grouping as per city or country if city is null
 		//{A=[c1, c7], B=[c2, c6], C=[c5], D=[c9], E=[c10], X=[c3, c4, c8]}
-		List<Student> nullCityEmp = emL.stream().filter(e -> e.getCity() == null).collect(Collectors.toList());
-		List<Student> nonNullCityEmp = emL.stream().filter(e -> e.getCity() != null).collect(Collectors.toList());
-		Map<String, List<String>> map1 = nonNullCityEmp.stream().collect(
-				Collectors.groupingBy(Student::getCity, Collectors.mapping(Student::getName, Collectors.toList())));
-		Map<String, List<String>> map2 = nullCityEmp.stream().collect(
-				Collectors.groupingBy(Student::getCountry, Collectors.mapping(Student::getName, Collectors.toList())));
-		map1.putAll(map2);
-		//another simpler approach
-		Map<String, List<String>> map3 = emL.stream().collect(
-				Collectors.groupingBy(e->e.getCity()!=null?e.getCity():e.getCountry(), 
+		Map<String, List<String>> map3 = emL.stream().collect(Collectors.groupingBy(e->e.getCity()!=null?e.getCity():e.getCountry(),
 						Collectors.mapping(Student::getName, Collectors.toList())));
 		
 		

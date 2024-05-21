@@ -1,4 +1,4 @@
-package backtracking;
+package basic.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,15 +52,32 @@ public class LetterCasePermutation {
 
 
     public static void main(String args[]){
-        String str ="a1b2";
+        String str ="a1b2cd";
         int count=0;
         char[] arr=str.toLowerCase().toCharArray();
-        List<String> subset  = letterCasePermutation(str);
-        for(String ll: subset){
+        List<List<String>> subset  = perm(str);
+        for(List<String> ll: subset){
             System.out.println(ll.toString());
             count++;
         }
         System.out.println(count);
     }
+    public static List<List<String>> perm(String S) {
+        List<List<String>> list = new ArrayList<>();
+        backTrack(list ,new ArrayList<>(), S.toCharArray(), 0);
+        return list;
+    }
 
+    private static void backTrack (List<List<String>> list,List<String> temp ,  char[] s, int start ) {
+        list.add(new ArrayList<>(temp));
+        for (int i = start; i < s.length; i++) {
+            if (Character.isAlphabetic(s[i])) {
+                s[i] = (Character.isLowerCase(s[i])) ? Character.toUpperCase(s[i]) :
+                        Character.toLowerCase(s[i]);
+                temp.add(new String(s));
+                backTrack(list,temp, s, i + 1);
+                temp.remove(temp.size()-1);
+            }
+        }
+    }
 }

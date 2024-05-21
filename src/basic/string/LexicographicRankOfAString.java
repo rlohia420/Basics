@@ -20,6 +20,7 @@ public class LexicographicRankOfAString {
 		String str ="bca";
 		perm("", str);
 		Collections.sort(list);
+		System.out.println(list);
 		System.out.println(list.indexOf(str)+1);
 	}
 }

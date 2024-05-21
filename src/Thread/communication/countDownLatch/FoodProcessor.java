@@ -15,11 +15,11 @@ public class FoodProcessor implements Runnable{
 	public void run() {
 		for(int i=0;i<noOfItemsOrdered.length;i++) {
 			try {
-				Thread.sleep(1000);
-				System.out.println("Before process "+latch.getCount());
-				System.out.println("item = "+noOfItemsOrdered[i]+" prepared");
+				Thread.sleep(100);
+				System.out.println("Before preparing "+noOfItemsOrdered[i]+" , latch is = "+latch.getCount());
+				//System.out.println("item = "+noOfItemsOrdered[i]+" prepared");
 				latch.countDown();
-				System.out.println("after process");
+				System.out.println("After preparing "+noOfItemsOrdered[i]+" , latch is = "+latch.getCount());
 			}catch(InterruptedException e) {
 				
 			}

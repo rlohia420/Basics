@@ -14,8 +14,10 @@ public class App {
         List<Integer> list1 = Arrays.asList(10,20,30,40);
         List<Integer> list2 = Arrays.asList(20,30,60,80);
         List<Integer> resp = list1.stream().filter(list2::contains).collect(Collectors.toList());
-
-
+        int sum =0;
+        int c = list1.stream().reduce(0,(a,b)->a+b);
+        System.out.println("SUM********** ="+ c);
+        System.out.println(resp);
         EmployeeFactory employeeFactory = new EmployeeFactory();
         employeeList = employeeFactory.getAllEmployee();
        // distinctProject();

@@ -1,4 +1,4 @@
-package backtracking;
+package basic.backtracking;
 
 import java.util.*;
 
@@ -11,18 +11,19 @@ public class WordBreak {
             System.out.println(ss);
         }
     }
-    public static void wordBreak(int start , String str , List<String> res , Set<String> wordSet , List<String> tempList){
+    public static void wordBreak(int start , String str , List<String> list , Set<String> dic , List<String> temp){
         if(start==str.length()){
-            res.add(tempList.toString());
-            return;
-        }
-        StringBuilder sbr = new StringBuilder();
-        for(int i=start;i<str.length();i++){
-            sbr.append(str.charAt(i));
-            if(wordSet.contains(sbr.toString())){
-                tempList.add(sbr.toString());
-                wordBreak(i+1 , str, res , wordSet, tempList);
-                tempList.remove(tempList.size() - 1);
+            list.add(temp.toString());
+            //return;
+        }else {
+            StringBuilder sbr = new StringBuilder();
+            for (int i = start; i < str.length(); i++) {
+                sbr.append(str.charAt(i));
+                if (dic.contains(sbr.toString())) {
+                    temp.add(sbr.toString());
+                    wordBreak(i + 1, str, list, dic, temp);
+                    temp.remove(temp.size() - 1);
+                }
             }
         }
     }

@@ -1,4 +1,4 @@
-package backtracking;
+package basic.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +19,7 @@ public class Subset1 {
             backtrack(list, tempList, nums, i + 1);
             tempList.remove(tempList.size() - 1);
         }
+
     }
     public static void main(String args[]){
         int[] arr={66,55,44};
@@ -26,5 +27,6 @@ public class Subset1 {
         for(List<Integer> ll: subset){
             System.out.println(ll);
         }
+        System.out.println(subset.size());
     }
 }
